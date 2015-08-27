@@ -29,7 +29,7 @@ TARGET_BOOTLOADER_BOARD_NAME := hummingbird
 
 # boot.img creation
 BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/boot.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_FOLDER)/boot.mk
 
 TARGET_KERNEL_VARIANT_CONFIG := android_hummingbird_defconfig
 
