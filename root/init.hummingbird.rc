@@ -9,7 +9,6 @@ on fs
     # mount partitions
     mount_all /fstab.hummingbird
     swapon_all /fstab.hummingbird
-    setprop ro.crypto.fuse_sdcard true
 
 on post-fs
     # sensor/i2c/backlight permissions
