@@ -27,4 +27,5 @@
 #
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/aosp_hummingbird.mk \
     $(LOCAL_DIR)/full_hummingbird.mk
