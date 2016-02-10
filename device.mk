@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/root/fstab.hummingbird:root/fstab.hummingbird \
 	$(DEVICE_FOLDER)/root/init.hummingbird.rc:root/init.hummingbird.rc \
 	$(DEVICE_FOLDER)/root/init.hummingbird.usb.rc:root/init.hummingbird.usb.rc \
-	$(DEVICE_FOLDER)/recovery/init.recovery.hummingbird.rc:/root/init.recovery.hummingbird.rc \
+	$(COMMON_FOLDER)/recovery/init.recovery.hd-common.rc:/root/init.recovery.hummingbird.rc \
 	$(DEVICE_FOLDER)/root/ueventd.hummingbird.rc:root/ueventd.hummingbird.rc \
 
 # Device settings
