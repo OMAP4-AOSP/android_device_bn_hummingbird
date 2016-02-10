@@ -23,17 +23,20 @@
 DEVICE_FOLDER := device/bn/hummingbird
 TARGET_BOOTLOADER_BOARD_NAME := hummingbird
 
-$(call inherit-product, device/bn/common/common.mk)
+COMMON_FOLDER := device/bn/common
+$(call inherit-product, $(COMMON_FOLDER)/common.mk)
 
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay/aosp
 
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/root/fstab.hummingbird:root/fstab.hummingbird \
-	$(DEVICE_FOLDER)/root/init.hummingbird.rc:root/init.hummingbird.rc \
-	$(DEVICE_FOLDER)/root/init.hummingbird.usb.rc:root/init.hummingbird.usb.rc \
+	$(COMMON_FOLDER)/root/fstab.hd-common:root/fstab.hummingbird \
+	$(DEVICE_FOLDER)/root/init.ro.hardware.rc:root/init.hummingbird.rc \
+	$(COMMON_FOLDER)/root/init.ro.hardware.usb.rc:root/init.hummingbird.usb.rc \
 	$(COMMON_FOLDER)/recovery/init.recovery.hd-common.rc:/root/init.recovery.hummingbird.rc \
-	$(DEVICE_FOLDER)/root/ueventd.hummingbird.rc:root/ueventd.hummingbird.rc \
+	$(COMMON_FOLDER)/root/ueventd.hd-common.rc:root/ueventd.hummingbird.rc \
+
+PRODUCT_COPY_FILES += $(COMMON_FOLDER)/root/initlogo.rle:root/initlogo.rle \
 
 # Device settings
 PRODUCT_PROPERTY_OVERRIDES += \
